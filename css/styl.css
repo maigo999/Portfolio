@@ -108,7 +108,7 @@ main {
   border: 3px #808080 dotted;
   font-family: 'Noto Sans JP';
   display: grid;
-  grid-auto-rows: 200px;
+  grid-auto-rows: 50px;
   grid-template-columns: repeat(auto-fill, 400px);
   -ms-flex-pack: distribute;
   justify-content: space-around;
@@ -119,6 +119,7 @@ main {
 @media screen and (max-width: 960px) {
   #profile .profile-box .profile-content {
     width: 90%;
+    grid-template-rows: 70px 200px 150px 150px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -131,35 +132,52 @@ main {
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
   order: 1;
+  grid-row: 1/2;
+}
+@media screen and (max-width: 960px) {
+  #profile .profile-box .profile-content #boxA {
+    grid-row: 1/1;
+  }
 }
 #profile .profile-box .profile-content #boxB {
   -webkit-box-ordinal-group: 4;
   -ms-flex-order: 3;
   order: 3;
+  grid-row: 3/7;
 }
 @media screen and (max-width: 960px) {
   #profile .profile-box .profile-content #boxB {
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
+    grid-row: 2/2;
   }
 }
 #profile .profile-box .profile-content #boxC {
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;
   order: 2;
+  grid-row: 1/3;
 }
 @media screen and (max-width: 960px) {
   #profile .profile-box .profile-content #boxC {
     -webkit-box-ordinal-group: 4;
     -ms-flex-order: 3;
     order: 3;
+    grid-row: 3/3;
   }
 }
 #profile .profile-box .profile-content #boxD {
   -webkit-box-ordinal-group: 5;
   -ms-flex-order: 4;
   order: 4;
+  grid-row: 4/7;
+  padding-top: 30px;
+}
+@media screen and (max-width: 960px) {
+  #profile .profile-box .profile-content #boxD {
+    grid-row: 4/4;
+  }
 }
 #profile .profile-box .profile-content .grid-box {
   width: 100%;
@@ -174,11 +192,14 @@ main {
   -ms-flex-pack: left;
   justify-content: left;
 }
+#profile .profile-box .profile-content .grid-box .flex-box .introduction {
+  height: 160px;
+}
 #profile .profile-box .profile-content .grid-box .flex-box p {
   font-size: 18px;
   word-wrap: break-word;
   width: 350px;
-  height: 160px;
+  height: auto;
   overflow: hidden;
 }
 #profile .profile-box .profile-content .grid-box .flex-box p:last-child {
@@ -204,9 +225,9 @@ main {
   -webkit-box-pack: left;
   -ms-flex-pack: left;
   justify-content: left;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 .back-para {
   background-image: url("../img/back-img.jpg");
