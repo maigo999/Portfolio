@@ -80,7 +80,7 @@ main
             justify-content: center
             @media screen and (max-width: 960px)
                 width: 90%
-                grid-template-rows: 70px 200px 150px 150px;
+                grid-template-rows: 90px 200px 150px 150px;
             @media screen and (max-width: 480px)
                 width: 95%
                 grid-template-columns: repeat(auto-fill, 300px);
@@ -117,18 +117,20 @@ main
                     justify-content: left
                     .introduction
                         height: 160px
+                        @media screen and (max-width: 480px)
+                            font-size: 15px
                     p
-                        font-size: 18px
+                        font-size: 17px
                         word-wrap: break-word
                         width: 350px
                         height: auto
                         overflow: hidden
-  
                         &:last-child
                             margin-bottom: 0
                 .name
                     text-align: center
-                    font-size: 16pt
+                    font-size: 20pt
+
                 p
                     text-align: left
                     height auto

@@ -119,7 +119,7 @@ main {
 @media screen and (max-width: 960px) {
   #profile .profile-box .profile-content {
     width: 90%;
-    grid-template-rows: 70px 200px 150px 150px;
+    grid-template-rows: 90px 200px 150px 150px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -195,8 +195,13 @@ main {
 #profile .profile-box .profile-content .grid-box .flex-box .introduction {
   height: 160px;
 }
+@media screen and (max-width: 480px) {
+  #profile .profile-box .profile-content .grid-box .flex-box .introduction {
+    font-size: 15px;
+  }
+}
 #profile .profile-box .profile-content .grid-box .flex-box p {
-  font-size: 18px;
+  font-size: 17px;
   word-wrap: break-word;
   width: 350px;
   height: auto;
@@ -207,7 +212,7 @@ main {
 }
 #profile .profile-box .profile-content .grid-box .name {
   text-align: center;
-  font-size: 16pt;
+  font-size: 20pt;
 }
 #profile .profile-box .profile-content .grid-box p {
   text-align: left;
